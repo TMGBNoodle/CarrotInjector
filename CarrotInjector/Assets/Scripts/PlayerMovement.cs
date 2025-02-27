@@ -14,11 +14,15 @@ public class PlayerMovement : MonoBehaviour
     public int maxJumps = 2;
 
     public Animator animator;
+    
+    public float jumpPower;
 
-    bool isGrounded = true;
+    Rigidbody2D body;
+    public bool isGrounded = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        body = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInput>();
         animator = GetComponent<Animator>();
         playerActions = input.actions;
@@ -31,8 +35,12 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    void doJump() {
+    void doJump(int jumpCount) {
+        print("Jumping");
         isGrounded = false;
+        body.AddForceY(jumpPower);
+        animator.SetInteger("Jumps", jumpCount+1);
+        
     }
 
     // Update is called once per frame
@@ -43,21 +51,23 @@ public class PlayerMovement : MonoBehaviour
         float jumpInfo = jump.ReadValue<float>();
         int jumpCount = animator.GetInteger("Jumps");
         bool tryJump = moveInfo.y > 0 || jumpInfo > 0;
-
-        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+        print(transform.position);
+        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, 0.05f);
         foreach (Collider2D collision in collisions) {
-            if (collision.gameObject.tag == "Floor") {
-                isGrounded = true;
-                animator.SetInteger("Jumps", 0);
-                animator.SetBool("Jumping", false);
-            }
-        }
-        if (tryJump) {
-            if (animator.GetBool("Jumping")) {
-                if (jumpCount < maxJumps || isGrounded) {
-                    doJump();
+            if (collision.gameObject.tag == "Floor" && body.linearVelocityY <= 0) {
+                if(isGrounded == false) {
+                    body.linearVelocityY = 0;
+                    isGrounded = true;
+                    animator.SetInteger("Jumps", 0);
+                    animator.SetBool("Jumping", false);
                 }
             }
         }
+        if (tryJump) {
+            if (jumpCount < maxJumps || isGrounded) {
+                doJump(jumpCount);
+            }
+        }
+        
     }
 }
