@@ -104,7 +104,6 @@ public class PlayerMovement : MonoBehaviour
             body.AddForceX(accel * xMove);
         }
         if(Math.Abs(goalSpeed - body.linearVelocityX) < 0.1f) {
-            animator.SetBool("Walking", false);
             body.linearVelocityX = goalSpeed;
         }
     }
