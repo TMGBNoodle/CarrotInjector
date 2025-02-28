@@ -54,7 +54,8 @@ public class ParallaxBackground : MonoBehaviour
         // Create a container object for this layer
         GameObject layerObj = new GameObject("ParallaxLayer_" + index);
         layerObj.transform.parent = transform;
-        
+
+        // layerObj.transform.localScale = new Vector3(5, 5);        
         // Center it on the camera's initial position, but at z = 0
         layerObj.transform.position = new Vector3(
             mainCamera.transform.position.x, 
