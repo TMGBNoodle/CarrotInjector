@@ -1,9 +1,16 @@
 fileFormatVersion: 2
 guid: 18219aa284b788747be121329395a0a5
+AssetOrigin:
+  serializedVersion: 1
+  productId: 248340
+  packageName: Pet Cats Pixel Art Pack
+  packageVersion: 1.0.0
+  assetPath: Assets/Pet Cats pack/Sprites/Cat-2/Cat-2-Stretching.png
+  uploadId: 578467
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +27,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,8 +71,10 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -74,9 +84,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,9 +97,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -98,6 +110,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -107,13 +133,14 @@ TextureImporter:
       name: Cat-2-Stretching_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 50
-        height: 50
+        x: 15
+        y: 18
+        width: 20
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -128,13 +155,14 @@ TextureImporter:
       name: Cat-2-Stretching_1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 50
-        height: 50
+        x: 66
+        y: 18
+        width: 18
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -149,13 +177,14 @@ TextureImporter:
       name: Cat-2-Stretching_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 50
-        height: 50
+        x: 114
+        y: 18
+        width: 19
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -170,13 +199,14 @@ TextureImporter:
       name: Cat-2-Stretching_3
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 50
-        height: 50
+        x: 162
+        y: 18
+        width: 21
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -191,13 +221,14 @@ TextureImporter:
       name: Cat-2-Stretching_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 50
-        height: 50
+        x: 212
+        y: 18
+        width: 21
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -212,13 +243,14 @@ TextureImporter:
       name: Cat-2-Stretching_5
       rect:
         serializedVersion: 2
-        x: 250
-        y: 0
-        width: 50
-        height: 50
+        x: 262
+        y: 18
+        width: 21
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -233,13 +265,14 @@ TextureImporter:
       name: Cat-2-Stretching_6
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 50
-        height: 50
+        x: 312
+        y: 18
+        width: 22
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -254,13 +287,14 @@ TextureImporter:
       name: Cat-2-Stretching_7
       rect:
         serializedVersion: 2
-        x: 350
-        y: 0
-        width: 50
-        height: 50
+        x: 362
+        y: 18
+        width: 22
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -275,13 +309,14 @@ TextureImporter:
       name: Cat-2-Stretching_8
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 50
-        height: 50
+        x: 411
+        y: 18
+        width: 23
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -296,13 +331,14 @@ TextureImporter:
       name: Cat-2-Stretching_9
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 50
-        height: 50
+        x: 461
+        y: 18
+        width: 23
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -317,13 +353,14 @@ TextureImporter:
       name: Cat-2-Stretching_10
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 50
-        height: 50
+        x: 511
+        y: 18
+        width: 23
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -338,13 +375,14 @@ TextureImporter:
       name: Cat-2-Stretching_11
       rect:
         serializedVersion: 2
-        x: 550
-        y: 0
-        width: 50
-        height: 50
+        x: 562
+        y: 18
+        width: 22
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -359,13 +397,14 @@ TextureImporter:
       name: Cat-2-Stretching_12
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
-        width: 50
-        height: 50
+        x: 613
+        y: 18
+        width: 21
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -377,6 +416,7 @@ TextureImporter:
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -386,30 +426,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      Cat-2-Stretching_2: 361907521
       Cat-2-Stretching_0: -1970771901
-      Cat-2-Stretching_4: -1209266214
-      Cat-2-Stretching_7: -943542544
-      Cat-2-Stretching_10: 783669149
-      Cat-2-Stretching_9: 77355957
-      Cat-2-Stretching_5: -137547759
-      Cat-2-Stretching_8: 2049464450
-      Cat-2-Stretching_11: -676696049
-      Cat-2-Stretching_3: 1656548104
       Cat-2-Stretching_1: -1909405600
+      Cat-2-Stretching_10: 783669149
+      Cat-2-Stretching_11: -676696049
       Cat-2-Stretching_12: -969850890
+      Cat-2-Stretching_2: 361907521
+      Cat-2-Stretching_3: 1656548104
+      Cat-2-Stretching_4: -1209266214
+      Cat-2-Stretching_5: -137547759
       Cat-2-Stretching_6: -464869417
-  spritePackingTag: 
+      Cat-2-Stretching_7: -943542544
+      Cat-2-Stretching_8: 2049464450
+      Cat-2-Stretching_9: 77355957
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 248340
-  packageName: Pet Cats Pixel Art Pack
-  packageVersion: 1.0.0
-  assetPath: Assets/Pet Cats pack/Sprites/Cat-2/Cat-2-Stretching.png
-  uploadId: 578467
