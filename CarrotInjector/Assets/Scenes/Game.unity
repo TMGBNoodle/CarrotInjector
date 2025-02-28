@@ -535,8 +535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - sprite: {fileID: 21300000, guid: 4a0bf6774f40eeb419adfda6b54d5c1f, type: 3}
-    parallaxSpeedX: 0.7
-    parallaxSpeedY: 0.7
+    parallaxSpeedX: 0.701
+    parallaxSpeedY: 0
     layerTransform: {fileID: 0}
     mainRenderer: {fileID: 0}
     leftRenderer: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 1504057728}
   m_Layer: 0
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -119,17 +119,15 @@ public class PlayerMovement : MonoBehaviour
         bool floorFound = false;
         foreach (Collider2D collision in collisions) {
             if (collision.gameObject.tag == "Floor") {
+                animator.SetInteger("Dashes", 0);
                 floorFound = true;
                 if(body.linearVelocityY <= 0 && canJump) {
-                    if(isGrounded == false) {
-                        floorFound = true;
-                        body.linearVelocityY = 0;
-                        isGrounded = true;
-                        animator.SetInteger("Jumps", 0);
-                        animator.SetInteger("Dashes", 0);
-                        animator.SetBool("Falling", false);
-                        animator.SetBool("Jumping", false);
-                    }
+                    floorFound = true;
+                    body.linearVelocityY = 0;
+                    isGrounded = true;
+                    animator.SetInteger("Jumps", 0);
+                    animator.SetBool("Falling", false);
+                    animator.SetBool("Jumping", false);
                 }
             }
         }
