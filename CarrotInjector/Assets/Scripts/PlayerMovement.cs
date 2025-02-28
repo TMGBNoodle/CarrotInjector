@@ -16,15 +16,17 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
     
-    public float jumpPower;
+    public float jumpPower = 250;
 
     public float maxSpeed = 5;
 
-    public float debounce = 0.1f;
+    public float debounce = 0.3f;
 
-    public float accel = 10f;
+    public float accel = 100;
     
-    public float decel = 15;
+    public float decel = 200;
+
+    SpriteRenderer sprite;
 
     float jumptime = 0;
 
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInput>();
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         playerActions = input.actions;
         move = playerActions.FindAction("Move");
         jump = playerActions.FindAction("Jump");
@@ -48,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     void doJump(int jumpCount) {
         animator.SetInteger("Jumps", jumpCount+1);
+        animator.SetBool("Jumping", true);
         jumptime = Time.time;
         print("Jumping");
         isGrounded = false;
@@ -81,13 +85,26 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         float goalSpeed = xMove * maxSpeed;
+        if (xMove != 0) {
+            animator.SetBool("Walking", true);
+        } else {
+            animator.SetBool("Walking", false);
+        }
+
+        if (xMove > 0) {
+            sprite.flipX = false;
+        } else if (xMove < 0) {
+            sprite.flipX = true;
+        }
         print(goalSpeed);
-        if (Math.Abs(goalSpeed) > Math.Abs(body.linearVelocityX) || Math.Sign(goalSpeed) != Math.Sign(body.linearVelocityX)) {
+        if (goalSpeed == 0 && Math.Abs(body.linearVelocityX) > 0) {
+            int sign = -1 * Math.Sign(body.linearVelocityX);
+            body.linearVelocityX += Math.Min(decel, Math.Abs(body.linearVelocityX)) * sign;
+        } else if (Math.Abs(goalSpeed) > Math.Abs(body.linearVelocityX) || Math.Sign(goalSpeed) != Math.Sign(body.linearVelocityX)) {
             body.AddForceX(accel * xMove);
-        } else if (goalSpeed == 0 && Math.Abs(body.linearVelocityX) > 0) {
-            body.AddForceX(decel * -1 * Math.Sign(body.linearVelocityX));
-        } 
+        }
         if(Math.Abs(goalSpeed - body.linearVelocityX) < 0.1f) {
+            animator.SetBool("Walking", false);
             body.linearVelocityX = goalSpeed;
         }
     }
