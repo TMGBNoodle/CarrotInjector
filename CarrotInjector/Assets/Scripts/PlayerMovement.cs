@@ -53,9 +53,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetInteger("Jumps", jumpCount+1);
         animator.SetBool("Jumping", true);
         jumptime = Time.time;
-        print("Jumping");
         isGrounded = false;
-        body.AddForceY(jumpPower);
+        body.linearVelocityY = jumpPower;
     }
 
     // Update is called once per frame
@@ -69,16 +68,20 @@ public class PlayerMovement : MonoBehaviour
         float timeSinceJump = Time.time - jumptime;
         bool canJump = timeSinceJump >= debounce;
         Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, 0.1f);
+        bool floorFound = false;
         foreach (Collider2D collision in collisions) {
             if (collision.gameObject.tag == "Floor" && body.linearVelocityY <= 0 && canJump) {
                 if(isGrounded == false) {
+                    floorFound = true;
                     body.linearVelocityY = 0;
                     isGrounded = true;
                     animator.SetInteger("Jumps", 0);
+                    animator.SetBool("Falling", false);
                     animator.SetBool("Jumping", false);
                 }
             }
         }
+        isGrounded = floorFound;
         if (tryJump && canJump) {
             if (jumpCount < maxJumps || isGrounded) {
                 doJump(jumpCount);
@@ -90,6 +93,13 @@ public class PlayerMovement : MonoBehaviour
         } else {
             animator.SetBool("Walking", false);
         }
+
+        if (body.linearVelocityY < 0 && !isGrounded) {
+            animator.SetBool("Falling", true);
+        } else if (body.linearVelocityY >= 0 && !isGrounded) {
+            animator.SetBool("Falling", false);
+            animator.SetBool("Jumping", true);
+        } 
 
         if (xMove > 0) {
             sprite.flipX = false;
