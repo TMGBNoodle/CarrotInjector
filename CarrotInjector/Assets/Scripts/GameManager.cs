@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Camera Follow script not assigned in GameManager!");
         }
     }
+    
+    public void RespawnPlayer() {
+        spawnPlayer();
+    }
 
     // This allows you to access the player from other scripts if needed
     public GameObject GetCurrentPlayer() {
